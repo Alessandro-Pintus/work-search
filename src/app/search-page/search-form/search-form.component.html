@@ -1,0 +1,40 @@
+<div class="space">
+  <div class="subSpace">
+    <form [formGroup]="searchForm" #l='ngForm' (ngSubmit)="onSubmit()">
+
+      <!-- RICERCA PER CITTA' -->
+      <div class="searchCity">
+        <h2>Select city</h2>
+        <select class="form-control-city" formControlName="city">
+          <option *ngFor="let city of Cities" [ngValue]="city">{{city}}</option>
+        </select>
+      </div>
+
+      <!-- RICERCA PER LIVELLO -->
+      <div class="checkbox-container" formGroupName="level">
+        <h2>Select level</h2>
+        <label>
+          <input type="checkbox" formControlName="Entry_Level" >Entry Level
+        </label>
+
+        <label>
+          <input type="checkbox" class="input" formControlName="Mid_Level">Mid Level
+        </label>
+
+        <label>
+          <input type="checkbox" class="input" formControlName="Senior_Level">Senior Level
+        </label>
+
+        <label>
+          <input type="checkbox" class="input" formControlName="Management">Management
+        </label>
+
+        <label>
+          <input type="checkbox" class="input" formControlName="Internship">Internship
+        </label>
+      </div>
+
+      <button class="searchBtn" type="submit" >Search</button>
+    </form>
+  </div>
+</div>

@@ -1,0 +1,33 @@
+<div class="container" *ngIf="detail">
+  <h1>{{detail.name}}</h1>
+  <h2>{{detail.description}}</h2>
+  <div class="detailsCompany">
+    <div class="companyData">
+      <div class="location">
+        <ul>
+          <h3>Location:</h3>
+          <li *ngFor="let city of locationList">{{city.name}}</li>
+        </ul>
+      </div>
+
+      <div class="typology">
+        <ul>
+          <h3>Typology:</h3>
+          <li *ngFor="let type of types">{{type.name}}</li>
+        </ul>
+      </div>
+
+      <div class="contact">
+        <ul>
+          <h3>Contact:</h3>
+          <li>
+            <a href="{{detail.refs.landing_page}}">Website</a>
+          </li>
+        </ul>
+      </div>
+
+    </div>
+  </div>
+
+
+</div>

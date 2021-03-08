@@ -1,0 +1,23 @@
+
+<div *ngIf="newData !== undefined" class="content" id="focus">
+  <div class="workHead">
+    <h2  >Company: {{newData[id].company.name}}</h2>
+    <h3><a (click)="companyDetail()" [routerLink]=" [ {outlets: {detail: ['company']}}]">Detail company</a></h3>
+    <h3>Position: {{newData[id].name}}</h3>
+    <h3>Publication date: {{newData[id].publication_date | date}}</h3>
+  </div>
+
+  <router-outlet name="detail"></router-outlet>
+
+  <div class="description">
+    <h3>Description:</h3>
+    <p>{{data}}</p>
+    <div class="subscribe">
+    <button class="subscribeBtn" onclick="alert('Work subscribed.')">Subscribe</button>
+    </div>
+  </div>
+</div>
+
+<div class="back">
+  <button class="backBtn" routerLink="['search-engineering-works']">Back</button>
+</div>

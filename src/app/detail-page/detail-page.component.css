@@ -1,0 +1,45 @@
+.content {
+ margin: 0 20px 0 0px;
+ width: 100vw;
+}
+
+.workHead {
+  background-image: linear-gradient(120deg, #c8c5c5 0%, #c7c7c7 100%);
+  background-blend-mode: normal, multiply;
+}
+
+.workHead h3,
+.workHead h2 {
+  margin: unset;
+  padding: 16px 0 16px 20px;
+}
+
+.description p,
+.description h3 {
+  padding: 0 20px 0 20px;
+  font-size: 17px;
+}
+
+.subscribe,
+.back {
+  display: flex;
+  justify-content: center;
+}
+
+.subscribeBtn {
+  margin-top: 10px;
+  border: 1px solid lightgrey;
+  border-radius: 4px;
+  width: 150px;
+  height: 60px;
+  font-size: 19px;
+}
+
+.backBtn {
+  margin: 43px 0 43px 0;
+  border: 1px solid lightgrey;
+  border-radius: 4px;
+  width: 79px;
+  height: 42px;
+  font-size: 17px;
+}

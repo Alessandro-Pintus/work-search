@@ -1,0 +1,20 @@
+<div class="title-container">
+  <h1 class="title">Engineering Works Search</h1>
+  <app-search-form (setResult)="receiveResult($event)"></app-search-form>
+</div>
+
+<div class="resultContainer" >
+  <div class="resultWork"  >
+    <a *ngFor="let list of data; index as i" class="workSpace" [attr.data-index]="i" (click)="details()" [routerLink]="['/details-work/', i ]">
+      <p>{{data[i].name}}</p>
+      <p>Level: {{data[i].levels[0].name}}</p>
+      <p>Location: {{data[i].locations[0].name}}</p><br>
+      <p>Company name: {{data[i].company.name}}</p>
+      <p>Publication date: {{data[i].publication_date | date}}</p>
+      <!-- <button   routerLinkActive="active">Details</button> -->
+    </a>
+  </div>
+</div>
+
+
+
